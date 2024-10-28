@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -33,36 +33,44 @@
             transition: background-color 0.3s;
         }
 
-            button:hover {
-                background-color: #1b5e20;
-            }
-
-        .image-container img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        .vantagens-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
         }
 
-        label, select, input {
-            font-size: 1.5em;
-            margin-top: 20px;
-            display: block;
-            margin: 10px auto;
-            width: 80%; /* Mudando para um tamanho responsivo */
-            max-width: 300px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .vantagem {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .vantagem img,
+        .diferenca img {
+            max-width: 100%; /* Certifique-se de que a imagem não exceda a largura do contêiner */
+            height: auto;    /* Mantenha a proporção da imagem */
+            border-radius: 5px; /* Opcional: adicione algum raio de borda para melhor estética */
+        }
+
+        .diferenca {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         #resultado {
+            display: none;
             margin-top: 20px;
-            font-size: 1.5em;
-            font-weight: bold; /* Para destacar o resultado */
-            color: #2e7d32; /* Cor verde para o resultado */
+            padding: 20px;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -72,18 +80,79 @@
         <img src="URL_DA_IMAGEM" alt="Armazém AutoStore">
     </div>
 
-    <label for="placas">Quantas placas você deseja?</label>
-    <input type="number" id="placas" min="1" value="1">
+    <h2>Vantagens do nosso Armazém Inteligente</h2>
+    <div class="vantagens-container">
+        <div class="vantagem">
+            <img src="https://www.facebook.com/photo/?fbid=1080764960386387&set=a.1080765050386378&__cft__[0]=AZVYKYrpfo7x1oKtGziD1MCON4x9J-kr88-xLlAK6dVRynKMUdrkBGBHL2LhAU90AYI8nld4dTLkHKGJv00De__qpORojT6rn9GHIrPICbkEEQ&__tn__=EH-R" alt="Vantagem 1">
+            <p>
+                Qualidade garantida
+                Oferecemos painéis solares de alta eficiência e durabilidade, garantindo que os clientes façam um investimento inteligente para a sua energia.
+            </p>
+        </div>
+        <div class="vantagem">
+            <img src="vvv" alt="Vantagem 2">
+            <p>
+                Entrega Rápida e Eficiente:
+                Nosso armazém inteligente garante uma logística ágil, permitindo que os pedidos sejam processados e enviados rapidamente. Com parcerias estratégicas de transporte, asseguramos que você receba o seu produto o mais rápido possível.
+            </p>
+        </div>
+        <div class="vantagem">
+            <img src="vvv" alt="Vantagem 3">
+            <p>
+                Preços Competitivos:
+                Com processos otimizados e redução de custos operacionais, conseguimos oferecer preços atrativos, tornando a energia solar acessível a mais pessoas.
+            </p>
+        </div>
+        <div class="vantagem">
+            <img src="https://drive.google.com/file/d/1xJhTuqbIoC9EJIJbKqzwdvwGniNLAd5R/view?usp=drive_link" alt="Vantagem 4">
+            <p>
+                Atendimento Personalizado:
+                Nossa equipe está disponível para te ajudar em todas as etapas, desde a escolha do produto até o pós-venda, oferecendo um atendimento ao cliente excepcional.
+            </p>
+        </div>
+        <div class="vantagem">
+            <img src="URL_DA_IMAGEM_VANTAGEM5" alt="Vantagem 5">
+            <p>
+                Sustentabilidade e Responsabilidade Ambiental:
+                Ao escolher nossos painéis solares, você contribui para a preservação do meio ambiente e para um futuro mais sustentável, além de economizar nas contas de energia.
+            </p>
+        </div>
+        <div class="vantagem">
+            <img src="URL_DA_IMAGEM_VANTAGEM6" alt="Vantagem 6">
+            <p>
+                Suporte Pós-Compra e Orientação:
+                Oferecemos sugestões e orientações no processo pós-compra, ajudando os clientes a encontrar instaladores qualificados e fornecendo informações relevantes sobre a instalação das placas.
+            </p>
+        </div>
+    </div>
 
-    <label for="uso">Uso:</label>
-    <select id="uso">
+    <div class="diferenca">
+        <h2>Diferença entre Painéis Solares Industriais e Residenciais</h2>
+        <div>
+            <img src="URL_DA_IMAGEM_PAINEIS_INDUSTRIAIS" alt="Painéis Industriais">
+            <p>Painéis Solares Industriais: Explicação aqui.</p>
+        </div>
+        <div>
+            <img src="URL_DA_IMAGEM_PAINEIS_RESIDENCIAIS" alt="Painéis Residenciais">
+            <p>Painéis Solares Residenciais: Explicação aqui.</p>
+        </div>
+    </div>
+
+    <h2>Faça seu Pedido</h2>
+    <label for="nome">Seu Nome:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+
+    <label for="placas">Quantidade de Placas:</label>
+    <input type="number" id="placas" placeholder="Digite a quantidade" min="1">
+
+    <label for="tipo">Tipo de Placa:</label>
+    <select id="tipo">
         <option value="residencial">Residencial</option>
-        <option value="comercial">Comercial/Industrial (mínimo 5 placas)</option>
+        <option value="industrial">Industrial</option>
     </select>
 
-    <label for="estado">Selecione seu estado:</label>
+    <label for="estado">Estado:</label>
     <select id="estado">
-        <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>
         <option value="BA">Bahia</option>
@@ -107,46 +176,26 @@
         <option value="RR">Roraima</option>
         <option value="SC">Santa Catarina</option>
         <option value="SP">São Paulo</option>
-        <option value="SE">Sergipe</option>
-        <option value="TO">Tocantins</option>
+        <!-- Adicione mais estados conforme necessário -->
     </select>
 
-    <button id="botao-calcular">Calcular</button>
-    <button id="botao-confirmar" style="display:none;">Fazer Pedido</button>
-    <p id="resultado"></p>
+    <button id="botao-confirmar">Fazer Pedido</button>
+    <div id="resultado"></div>
 
     <script>
-        document.getElementById('botao-calcular').onclick = function () {
-            var placas = parseInt(document.getElementById('placas').value);
-            var uso = document.getElementById('uso').value;
-            var estado = document.getElementById('estado').value;
-
-            // Validação para uso comercial
-            if (uso === "comercial" && placas < 5) {
-                alert("Para uso comercial/industrial, o mínimo é 5 placas.");
-                return;
-            }
-
-            // Calcular o valor do frete
-            var frete = 0;
-            if (estado === "RJ") {
-                frete = 30; // Frete para o Rio de Janeiro
-            } else {
-                frete = 70; // Frete para os outros estados
-            }
-
-            var valorTotal = placas * 100 + frete; // Supondo que cada placa custa 100
-            document.getElementById('resultado').innerHTML =
-                "Valor Total: R$ " + valorTotal.toFixed(2) +
-                "<br>Frete: R$ " + frete.toFixed(2);
-
-            // Mostrar o botão de confirmar pedido
-            document.getElementById('botao-confirmar').style.display = 'block';
-        };
-
         document.getElementById('botao-confirmar').onclick = function () {
-            alert("Obrigado pelo seu pedido! Aguardamos você novamente.");
-            // Aqui você pode adicionar mais ações, como redirecionar ou limpar o formulário
+            var nome = document.getElementById('nome').value;
+            var placas = parseInt(document.getElementById('placas').value);
+            var tipo = document.getElementById('tipo').value;
+
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.style.display = 'block';
+
+            if (placas === 28) {
+                resultadoDiv.innerHTML = "Parabéns, " + nome + "! Você ganhou um desconto de 20% na compra de 28 placas!";
+            } else {
+                resultadoDiv.innerHTML = "Obrigado, " + nome + "! Seu pedido de " + placas + " placas " + tipo + " foi realizado com sucesso!";
+            }
         };
     </script>
 </body>
